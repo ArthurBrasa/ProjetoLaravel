@@ -1,0 +1,44 @@
+.x{
+    border: 1px solid red;
+}
+.bg-navbar-primary{
+    background-color: var(--black);
+   
+}
+.text-color-primary{
+    color: var(--primary-color) !important;
+}
+
+.bg-offcanvas{
+    background: linear-gradient(180deg, var(--primary-color)50%, #CD1AC0);
+}
+
+/* HOME */
+#c1{
+    height: 400px;
+    background-image: url(img/pexels-miguel-á-padriñán-19677.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(46, 46, 46);
+    background-position-x: calc(100% - 50%);
+    left: 500px;
+}
+#c2{
+    height: 400px;
+    background-image: url(img/pexels-miguel-á-padriñán-19677.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(46, 46, 46);
+    background-position-x: calc(100% - 50%);
+    left: 500px;
+}
+#c3{
+    height: 400px;
+    background-image: url(img/pexels-miguel-á-padriñán-19677.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: rgb(46, 46, 46);
+    background-position-x: calc(100% - 50%);
+    left: 500px;
+}
+
