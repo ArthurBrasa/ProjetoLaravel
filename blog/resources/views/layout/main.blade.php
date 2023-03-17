@@ -52,7 +52,6 @@
                                 @guest
                                     Blog Geek
                                 @endguest
-
                             </h5>
                             <button type="button" class="btn-close
                                 btn-close-white"
