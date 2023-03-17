@@ -10,38 +10,11 @@
 }
 
 .bg-offcanvas{
-    background: linear-gradient(180deg, var(--primary-color)50%, var(--primary-gradiente-color));
-}
-
-.height-nav{
-    height: 65px;
+    background: linear-gradient(180deg, var(--primary-color)50%, #CD1AC0);
 }
 
 /* HOME */
-.feed-news {
-    width: 60%;
-    height: 900px;
-    margin: 2rem auto;
-    background-color: #CD1AC0;
-}
-
-.side-box{
-    /* position: fixed; */
-    width: 140px;
-    
-    height: min-content;
-    background-color: var(--primary-color);
-    /* top: 190px; */
-}
-.animation{
-    transition: all 1s;
-}
-.animation:hover{
-    margin-left: 10px;
-
-}
-/* HOME
-.c1{
+#c1{
     border: 1px solid black;
     height: 400px;
     background-size: contain;
@@ -68,4 +41,4 @@
     background-color: rgb(46, 46, 46);
     background-position-x: calc(100% - 50%);
     left: 500px;
-} */
+}

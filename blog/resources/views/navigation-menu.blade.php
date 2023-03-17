@@ -108,6 +108,11 @@
 
                             <div class="border-t border-gray-200"></div>
 
+                            <x-dropdown-link href=" {{ route('home') }} ">
+                                {{__('News')}}
+                            </x-dropdown-link>
+
+                            <div class="border-t border-gray-200"></div>
                             <!-- Authentication -->
                             <form method="POST" action="{{ route('logout') }}" x-data>
                                 @csrf

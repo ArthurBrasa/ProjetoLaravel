@@ -30,8 +30,7 @@
                 offcanvas
                 navbar">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-color-primary fw-bold" href="#">Blog
-                        Geek</a>
+                    <a class="navbar-brand text-color-primary fw-bold" href="#">Blog Geek</a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbarDark"
@@ -46,7 +45,15 @@
                         aria-labelledby="offcanvasNavbarDarkLabel">
                         <div class="offcanvas-header">
                             <h5 class="offcanvas-title"
-                                id="offcanvasNavbarDarkLabel fw-bold">Blog Geek</h5>
+                                id="offcanvasNavbarDarkLabel fw-bold">
+                                @auth
+                                    {{Auth::user()->name}}
+                                @endauth
+                                @guest
+                                    Blog Geek
+                                @endguest
+
+                            </h5>
                             <button type="button" class="btn-close
                                 btn-close-white"
                                 data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -70,9 +77,18 @@
                                         aria-current="page"
                                         href="#">News</a>
                                 </li>
-                                <li class="nav-item fs-5">
-                                    <a class="nav-link" href="#">Login</a>
+                                @auth
+                                <li class="nav-item">
+                                    <a class="nav-link fs-5" href="{{ route('dashboard') }}">Dashboard</a>
                                 </li>
+                                @endauth
+                                
+                                @guest
+                                <li class="nav-item fs-5">
+                                    <a class="nav-link" href="{{route('login')}}">Login</a>
+                                </li>
+                                @endguest
+                                
                                 <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#"
                                     role="button" data-bs-toggle="dropdown"

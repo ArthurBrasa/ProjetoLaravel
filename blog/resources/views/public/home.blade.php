@@ -3,6 +3,8 @@
 @section("title", "Blog Geek")
 @section('content')
 
+
+
 <div id="carouselExampleCaptions" class="carousel slide">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -44,8 +46,8 @@
 
   
   <div class="row">
-    <div class="col-2 bg-tranparent"></div>
-    <div class="col-7 shadow py-3">
+    <div class="col-0 col-md-2 bg-tranparent"></div>
+    <div class="col-9 col-md-7 shadow py-3">
 
 
       {{-- CARDS --}}
@@ -61,7 +63,7 @@
 
 
     </div>
-    <div class="col-3 shadow sticky-top side-box ms-5 " >
+    <div class="col-3 col-md-3 shadow sticky-top side-box ms-0 ms-md-5 " >
       <div class="height-nav"></div>
       <div class="px-3 body-side-box">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
