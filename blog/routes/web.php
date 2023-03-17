@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\StoreController;
+use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [NavigationController::class, 'home'])
 ->name('home');
+
+Route::get('/store', [StoreController::class, 'index'])
+->name('store')->middleware('auth');
 
 // Route::middleware(['auth:sanctum', config('jetstream.auth_session') ,'verified'])
 // ->group( function () {
