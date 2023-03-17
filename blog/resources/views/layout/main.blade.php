@@ -106,14 +106,14 @@
         </header>
         <div class="height-nav"></div>
 
-        <section class="vh-100">
+       
 
             @yield('content')
 
-        </section>
+       
 
 
-        <div class="container-fluid">
+        <div class="container-fluid ">
             <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5
                 my-5 p-0">
                 <div class="d-flex w-100 ">
