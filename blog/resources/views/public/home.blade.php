@@ -49,6 +49,26 @@
     <div class="col-0 col-md-2 bg-tranparent"></div>
     <div class="col-9 col-md-7 shadow py-3">
 
+      @auth
+        {{-- CARDS --}}
+        <div class="my-1">
+          <form name='title' action=" {{ route('NewArticle') }} " method="post" class="">
+            @csrf
+            <div class="card">
+              <h5 class="card-header"><input name="subtitle" class="form-control" type="text" placeholder="Title"></h5>
+              <div class="card-body">
+                <h5 class="card-title"><input type="text" class="form-control" placeholder="Sub-Title"></h5>
+                <textarea name="content" id="" cols="10" rows="10" class="form-control" style="resize:none" placeholder="..."></textarea>
+                {{-- <a href="#" class="btn btn-primary mt-1" type="submit">Post</a> --}}
+                <button type="submit" class="btn btn-primary mt-1">Post</button>
+              </div>
+            </div>
+            {{-- <input name="user" type="text" > --}}
+        </div>
+        </form>
+        {{-- FIM CARDS --}}    
+      @endauth
+          
 
       {{-- CARDS --}}
       <div class="card">
