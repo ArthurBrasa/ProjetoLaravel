@@ -35,6 +35,7 @@ class NewArticleController extends Controller
         $article->title =  $request->title;
         $article->subtitle =  $request->subtitle;
         $article->content =  $request->content;
+        $article->id_user = auth()->id;
         
         $article->save();
 

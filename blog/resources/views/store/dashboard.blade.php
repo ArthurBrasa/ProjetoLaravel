@@ -4,7 +4,6 @@
 @section('tile')
 @section('content')
 
-
     
 @role('user')
     <h1>Ola User</h1>

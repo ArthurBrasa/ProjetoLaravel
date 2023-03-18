@@ -69,12 +69,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link active fs-5"
                                         aria-current="page"
-                                        href="#">Loja</a>
+                                        href=" {{route('store')}} ">Loja</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active fs-5"
                                         aria-current="page"
-                                        href="#">News</a>
+                                        href=" {{route('home')}} ">News</a>
                                 </li>
                                 @auth
                                 <li class="nav-item">
