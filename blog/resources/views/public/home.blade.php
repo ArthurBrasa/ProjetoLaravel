@@ -52,12 +52,12 @@
       @auth
         {{-- CARDS --}}
         <div class="my-1">
-          <form name='title' action=" {{ route('NewArticle') }} " method="post" class="">
+          <form  action=" {{ route('NewArticle') }} " method="post" class="">
             @csrf
             <div class="card">
-              <h5 class="card-header"><input name="subtitle" class="form-control" type="text" placeholder="Title"></h5>
+              <h5 class="card-header"><input  name='title' class="form-control" type="text" placeholder="Title"></h5>
               <div class="card-body">
-                <h5 class="card-title"><input type="text" class="form-control" placeholder="Sub-Title"></h5>
+                <h5 class="card-title"><input name="subtitle" type="text" class="form-control" placeholder="Sub-Title"></h5>
                 <textarea name="content" id="" cols="10" rows="10" class="form-control" style="resize:none" placeholder="..."></textarea>
                 {{-- <a href="#" class="btn btn-primary mt-1" type="submit">Post</a> --}}
                 <button type="submit" class="btn btn-primary mt-1">Post</button>
@@ -69,17 +69,7 @@
         {{-- FIM CARDS --}}    
       @endauth
           
-
-      {{-- CARDS --}}
-      <div class="card">
-        <h5 class="card-header">Featured</h5>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque excepturi delectus nobis, autem natus officia at aut quaerat perferendis sapiente, repellendus voluptas, dolor commodi rerum quo cumque officiis vel porro. Nam ipsa ad sed explicabo error, adipisci exercitationem dignissimos harum? Dignissimos quos soluta, quas aperiam ex necessitatibus. Similique, assumenda debitis.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      {{-- FIM CARDS --}}
+      @livewire('card-news')
 
 
     </div>
