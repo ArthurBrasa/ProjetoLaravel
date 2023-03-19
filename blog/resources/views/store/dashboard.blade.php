@@ -4,7 +4,9 @@
 @section('tile')
 @section('content')
 
-    
+@auth
+    teste
+@endauth
 @role('user')
     <h1>Ola User</h1>
     <h1>Ola User</h1>

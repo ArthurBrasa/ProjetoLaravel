@@ -59,7 +59,7 @@
               <div class="card-body">
                 <h5 class="card-title"><input name="subtitle" type="text" class="form-control" placeholder="Sub-Title"></h5>
                 <textarea name="content" id="" cols="10" rows="10" class="form-control" style="resize:none" placeholder="..."></textarea>
-                {{-- <a href="#" class="btn btn-primary mt-1" type="submit">Post</a> --}}
+
                 <button type="submit" class="btn btn-primary mt-1">Post</button>
               </div>
             </div>

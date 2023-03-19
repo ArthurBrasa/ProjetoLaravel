@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title', 100)->nullable();
             $table->string('subTitle', 200)->nullable();
             $table->text('content')->nullable();
+            $table->unsignedBigInteger("idUser");
+            $table->foreign('idUser')->references('id')->on('users');
             $table->timestamps();
         });
     }
