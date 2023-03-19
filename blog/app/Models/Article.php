@@ -14,7 +14,7 @@ class Article extends Model
         'title',
         'subTitle',
         'content',
-        'id_user',
+        'idUser',
         'created_at',
         'updated_at' 
     ];

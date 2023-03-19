@@ -12,22 +12,27 @@
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="..." class="d-block w-100 bg-dark" height="400px" alt="...">
+      <div class="carousel-item active bg-dark" style="height: 400px; background-image: url(/img/background-1.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
+        <div class="d-flex justify-content-center">
+          {{-- <img src="img/background-1-1-2.png" class="d-block bg-dark" height="400px" alt="..."> --}}
+        </div>
         <div class="carousel-caption d-none d-md-block">
-          <h5>First slide label</h5>
-          <p>Some representative placeholder content for the first slide.</p>
+          <h5>Lycoris Recoil</h5>
+          <p>Chisato é a agente mais forte de todos os tempos na Lycoris, ao lado da talentosa mas misteriosa Takina.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100 bg-dark" height="400px" alt="...">
+        {{-- <img src="img/background-2.jpg" class="d-block w-100 bg-dark" height="400px" alt="..."> --}}
+        <div style="height: 400px; background-image: url(/img/background-2.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
+
+        </div>
         <div class="carousel-caption d-none d-md-block">
           <h5>Second slide label</h5>
           <p>Some representative placeholder content for the second slide.</p>
         </div>
       </div>
       <div class="carousel-item">
-        <img src="..." class="d-block w-100 bg-dark" height="400px" alt="...">
+        <div style="height: 400px; background-image: url(/img/background-3.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
         <div class="carousel-caption d-none d-md-block">
           <h5>Third slide label</h5>
           <p>Some representative placeholder content for the third slide.</p>
@@ -49,27 +54,9 @@
     <div class="col-0 col-md-2 bg-tranparent"></div>
     <div class="col-9 col-md-7 shadow py-3">
 
-      @auth
-        {{-- CARDS --}}
-        <div class="my-1">
-          <form  action=" {{ route('NewArticle') }} " method="post" class="">
-            @csrf
-            <div class="card">
-              <h5 class="card-header"><input  name='title' class="form-control" type="text" placeholder="Title"></h5>
-              <div class="card-body">
-                <h5 class="card-title"><input name="subtitle" type="text" class="form-control" placeholder="Sub-Title"></h5>
-                <textarea name="content" id="" cols="10" rows="10" class="form-control" style="resize:none" placeholder="..."></textarea>
-
-                <button type="submit" class="btn btn-primary mt-1">Post</button>
-              </div>
-            </div>
-            {{-- <input name="user" type="text" > --}}
-        </div>
-        </form>
-        {{-- FIM CARDS --}}    
-      @endauth
-          
-      @livewire('card-news')
+     @livewire('show-articles')
+      {{-- <livewire:card-news /> --}}
+      {{-- @livewire('card-news') --}}
 
 
     </div>
@@ -77,8 +64,13 @@
       <div class="height-nav"></div>
       <div class="px-3 body-side-box">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          
           <li class="nav-item ">
-            <a class="nav-link active fw-bold text-white animation" aria-current="page" href="#">Animes</a>   
+            <a class="nav-link fw-bold text-white animation" aria-current="page" href="#">Destaques</a>   
+          </li>
+
+          <li class="nav-item ">
+            <a class="nav-link fw-bold animation" aria-current="page" href="#">Animes</a>   
           </li>
           <li class="nav-item">
             <a class="nav-link fw-bold animation" href="#">Jogos</a>

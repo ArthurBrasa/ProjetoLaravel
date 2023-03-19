@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\NewArticleController;
 use App\Http\Controllers\StoreController;
 use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
@@ -22,10 +23,11 @@ Route::get('/', [NavigationController::class, 'home'])
 Route::get('/store', [StoreController::class, 'index'])
 ->name('store')->middleware('auth');
 
-// Route::middleware(['auth:sanctum', config('jetstream.auth_session') ,'verified'])
-// ->group( function () {
-//     Route::get('/', [NavigationController::class, 'home'])->name('home');
-// });
+Route::post('/NewArticle', [NewArticleController::class, 'store'])
+->name('NewArticle')->middleware('auth');
+
+Route::delete('/deleteArticle/{id}', [NewArticleController::class, 'destroy'])
+->name('deleteArticle');
 
 
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
