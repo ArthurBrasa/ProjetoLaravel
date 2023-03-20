@@ -45,7 +45,42 @@
           </div>
         </div>
   
-        @livewire('update-articles')
+        @auth
+        {{-- CARDS  {{ route('NewArticle') }} --}}
+        <div class="my-1"> 
+          <form action="{{ route('NewArticle') }}" method="post" class="">
+            @csrf
+            <div class="card">
+              <h5 class="card-header"><input  name='title' class="form-control" type="text" placeholder="Title"></h5>
+              <div class="card-body">
+                <h5 class="card-title"><input  name="subtitle" type="text" class="form-control" placeholder="Sub-Title"></h5>
+                <textarea wire:model="content" name="content" id="" cols="10" rows="10" class="form-control" style="resize:none" placeholder="..."></textarea>
+                <div class="d-flex mt-4 justify-content-around">
+                  <label for="Anime" class="flex items-center">
+                      <x-checkbox id="Anime" name="Anime" />
+                      <span class="ml-2 text-sm text-gray-600">{{ __('Anime') }}</span>
+                  </label>
+                  <label for="Game" class="flex items-center">
+                      <x-checkbox id="Game" name="Game" />
+                      <span class="ml-2 text-sm text-gray-600">{{ __('Game') }}</span>
+                  </label>
+                  <label for="Cosplay" class="flex items-center">
+                      <x-checkbox id="Cosplay" name="Coplay" />
+                      <span class="ml-2 text-sm text-gray-600">{{ __('Cosplay') }}</span>
+                  </label>
+                  <label for="Tech" class="flex items-center">
+                      <x-checkbox id="Tech" name="Tech" />
+                      <span class="ml-2 text-sm text-gray-600">{{ __('Tech') }}</span>
+                  </label>
+              </div>
+                <button type="submit" class="btn btn-primary mt-1 d-block mt-3">Post</button>
+              </div>
+            </div>
+    
+          </form>
+        </div>
+        {{-- FIM CARDS --}}    
+        @endauth
   
         <h2>Suas Postagens</h2>
         <style>

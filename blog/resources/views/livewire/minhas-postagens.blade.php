@@ -21,9 +21,22 @@
             <td class="text-center"><button class="btn btn-sm btn-outline-danger" disabled>Remover</button></td>
         @endcan
         
+        @can('edit articles')
+            <form action="{{ route('editArticle', $item->id)}}" method="POST">
+                @csrf
+                @method('PUT')
+                <td class="text-center"><button type="submit" class="btn btn-sm btn-outline-warning disabled" >Editar</button></td>
+            </form>
+        @endcan 
+
+        @if (session('edit'))
+        {{-- @session('edit') --}}
+            
+            @livewire('update-modal-article')
+
+        @endif
         
-        <td class="text-center"><button class="btn btn-sm btn-outline-warning" >Editar</button></td>
-        
+      
     
     
     </tr>    

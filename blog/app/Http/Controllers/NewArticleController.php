@@ -3,14 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\_article;
 use App\Models\Article;
-use Illuminate\Contracts\View\View;
+use App\Models\Article_has_topics;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class NewArticleController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      */
@@ -37,8 +38,45 @@ class NewArticleController extends Controller
         $article->subtitle =  $request->subtitle;
         $article->content =  $request->content;
         $article->idUser = Auth::id();
-        
+
         $article->save();
+        
+
+        
+        if($request->Game != null){
+            $topic = new Article_has_topics();
+            $topic->topics = 4;
+            $topic->article = $article->id;
+
+            $topic->save();
+          
+        }
+        
+        if($request->Coplay != null){
+            $topic = new Article_has_topics();
+            $topic->topics = 3;
+            $topic->article = $article->id;
+
+            $topic->save();
+          
+        }
+        if($request->Tech != null){
+            $topic = new Article_has_topics();
+            $topic->topics = 2;
+            $topic->article = $article->id;
+
+            $topic->save();
+          
+        }
+        if($request->Anime != null){
+            $topic = new Article_has_topics();
+            $topic->topics = 1;
+            $topic->article = $article->id;
+
+            $topic->save();
+          
+        }
+
         return redirect()->route('dashboard')->with('add', 'Novo Post Adicionado!');
     }
 
@@ -56,7 +94,9 @@ class NewArticleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $article = Article::find($id);
+        
+        return redirect()->route('dashboard')->with('edit', $article);
     }
 
     /**
@@ -73,6 +113,10 @@ class NewArticleController extends Controller
     public function destroy(string $id)
     {
         $article = Article::find($id);
+        $article_has_topic = DB::delete(
+            'delete from article_has_topics where article = ?;', [$id]
+        );
+        // dd($article_has_topic);
         $article->delete();
 
         return redirect()->route('dashboard')->with('success', 'Postagem Removida com Sucesso');

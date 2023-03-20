@@ -28,10 +28,14 @@
         <header>
             @extends('layout.nav')
         </header>
-        <div class="height-nav"></div>
+        <div class="height-nav"></div> 
+        
+        
+       <main>
+         @yield('content')
+       </main>
 
-
-            @yield('content')
+          
 
 
         <div class="container-fluid ">

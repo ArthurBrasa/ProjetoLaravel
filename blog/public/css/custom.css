@@ -40,6 +40,22 @@
     margin-left: 10px;
 
 }
+
+.x-1{
+    color: var(--secondary-color);
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    background: none;
+    font-weight: bold;
+    transition: all 1s;
+}
+.x-1:hover{
+    margin-left: 10px;
+}
+
+
 /* HOME
 .c1{
     border: 1px solid black;

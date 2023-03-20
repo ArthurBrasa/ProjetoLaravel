@@ -23,19 +23,19 @@
       </div>
       <div class="carousel-item">
         {{-- <img src="img/background-2.jpg" class="d-block w-100 bg-dark" height="400px" alt="..."> --}}
-        <div style="height: 400px; background-image: url(/img/background-2.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
+        <div style="height: 400px; background-image: url(/img/background-5.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
 
         </div>
         <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
+          <h5>Programdor Full-Stack</h5>
+          <p>Mitos e verdades sobre os programadores full-stack</p>
         </div>
       </div>
       <div class="carousel-item">
-        <div style="height: 400px; background-image: url(/img/background-3.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
+        <div style="height: 400px; background-image: url(/img/background-6.jpg);background-size: cover;background-position-y: -60px; background-repeat: no-repeat;">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
+          <h5>Grande Muralha da China</h5>
+          <p>uma série de fortificações feitas de pedra, tijolo, terra compactada, madeira e outros materiais.</p>
         </div>
       </div>
     </div>
@@ -49,42 +49,12 @@
     </button>
   </div>
 
-  
+  {{-- POSTAGEM --}}
   <div class="row">
     <div class="col-0 col-md-2 bg-tranparent"></div>
-    <div class="col-9 col-md-7 shadow py-3">
-
-     @livewire('show-articles')
-      {{-- <livewire:card-news /> --}}
-      {{-- @livewire('card-news') --}}
-
-
+  
+      @livewire('show-articles')
+  
     </div>
-    <div class="col-3 col-md-3 shadow sticky-top side-box ms-0 ms-md-5 " >
-      <div class="height-nav"></div>
-      <div class="px-3 body-side-box">
-        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-          
-          <li class="nav-item ">
-            <a class="nav-link fw-bold text-white animation" aria-current="page" href="#">Destaques</a>   
-          </li>
-
-          <li class="nav-item ">
-            <a class="nav-link fw-bold animation" aria-current="page" href="#">Animes</a>   
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold animation" href="#">Jogos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active fw-bold animation" aria-current="page" href="#">Cosplay</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bold animation" href="#">Tech</a>
-          </li>
-          
-        </ul>
-      </div>
-    </div>
-  </div>
 
 @endsection

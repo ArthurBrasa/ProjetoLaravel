@@ -1,3 +1,4 @@
+@role("Super-Admin")
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
@@ -58,3 +59,13 @@
         </form>
     </x-authentication-card>
 </x-guest-layout>
+@endrole
+@role("user")
+    <a href=" {{route("home")}} ">Voltar</a>
+@endrole
+@role("admin")
+    <a href=" {{route("home")}} ">Voltar</a>
+@endrole
+@guest
+    <a href=" {{route("home")}} ">Voltar</a>
+@endguest

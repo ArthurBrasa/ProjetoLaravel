@@ -20,16 +20,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [NavigationController::class, 'home'])
 ->name('home');
 
-Route::get('/store', [StoreController::class, 'index'])
-->name('store')->middleware('auth');
 
+// Area dos artigosS
 Route::post('/NewArticle', [NewArticleController::class, 'store'])
 ->name('NewArticle')->middleware('auth');
 
 Route::delete('/deleteArticle/{id}', [NewArticleController::class, 'destroy'])
-->name('deleteArticle');
+->name('deleteArticle')->middleware('auth');
+
+Route::put('/editArticle', [NewArticleController::class, 'edit'])->name('editArticle')->middleware('auth');
 
 
+// Dashboard
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])
 ->group(function () {
 Route::get('/dashboard', function () {
