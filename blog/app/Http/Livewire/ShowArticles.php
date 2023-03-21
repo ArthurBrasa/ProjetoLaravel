@@ -18,7 +18,7 @@ class ShowArticles extends Component
         $this->articles = DB::select('
         select articles.*, article_has_topics.article from articles
         join article_has_topics on articles.id = article_has_topics.article
-        where article_has_topics.topics = 1; 
+        where article_has_topics.topics = 1 order by created_at desc; 
            
         ');
         
@@ -28,7 +28,7 @@ class ShowArticles extends Component
         $this->articles = DB::select('
         select articles.*, article_has_topics.article from articles
         join article_has_topics on articles.id = article_has_topics.article
-        where article_has_topics.topics = 2; 
+        where article_has_topics.topics = 2 order by created_at desc; 
            
         ');
         
@@ -38,7 +38,7 @@ class ShowArticles extends Component
         $this->articles = DB::select('
         select articles.*, article_has_topics.article from articles
         join article_has_topics on articles.id = article_has_topics.article
-        where article_has_topics.topics = 3; 
+        where article_has_topics.topics = 3 order by created_at desc; 
            
         ');
         
@@ -48,7 +48,7 @@ class ShowArticles extends Component
         $this->articles = DB::select('
         select articles.*, article_has_topics.article from articles
         join article_has_topics on articles.id = article_has_topics.article
-        where article_has_topics.topics = 4; 
+        where article_has_topics.topics = 4 order by created_at desc; 
            
         ');
         
