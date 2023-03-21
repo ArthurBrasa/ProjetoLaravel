@@ -2,7 +2,7 @@
                 offcanvas
                 navbar">
                 <div class="container-fluid">
-                    <a class="navbar-brand text-color-primary fw-bold" href="#">Blog Geek</a>
+                    <a class="navbar-brand text-color-primary fw-bold" href="#">Blog</a>
                     <button class="navbar-toggler" type="button"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasNavbarDark"
@@ -22,7 +22,7 @@
                                     {{Auth::user()->name}}
                                 @endauth
                                 @guest
-                                    Blog Geek
+                                    Blog
                                 @endguest
                             </h5>
                             <button type="button" class="btn-close

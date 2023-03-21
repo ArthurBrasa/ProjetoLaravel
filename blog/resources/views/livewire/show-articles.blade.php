@@ -14,7 +14,7 @@
                     <p class="card-text">
                         {{$article->content}}
                     </p>
-                    <a href="#" class="btn btn-primary">More</a>
+                    <a href="#" class="btn btn-outline-primary">Curti</a>
                     </div>
                 </div> 
            
